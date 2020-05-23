@@ -4,12 +4,14 @@
 (defcustom ol-library-video-dir "~/videos"
   "The path to be used for video-links."
   :group 'ol-library
-  :type 'directory)
+  :type 'directory
+  :safe t)
 
 (defcustom ol-library-video-regexp (concat "\\`[^.].*\\." (regexp-opt (list "mkv" "mp4" "mov" "webm" "avi" "mpeg" "mpg")) "\\'")
   "Regular expression to match files for `ol-library-video-store-link'"
   :group 'ol-library
-  :type 'regexp)
+  :type 'regexp
+  :safe t)
 
 (defcustom ol-library-video-to-path-function-list '(ol-library-plain-folder-format
                                                    ol-library-year-folder-format)
@@ -18,7 +20,8 @@ The first function in this list defines the preferred function
 which will be used when creating new attachment folders. All
 functions of this list will be tried when looking for videos."
   :group 'ol-library
-  :type '(repeat (function :tag "Function with videoname as input")))
+  :type '(repeat (function :tag "Function with videoname as input"))
+  :safe t)
 
 (defun ol-library-video--collect ()
     "Create collection of videos."

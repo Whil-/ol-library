@@ -4,12 +4,14 @@
 (defcustom ol-library-web-dir "~/webarchive"
   "The path to be used for web-links."
   :group 'ol-library-web
-  :type 'directory)
+  :type 'directory
+  :safe t)
 
 (defcustom ol-library-web-regexp (concat "\\`[^.].*\\." (regexp-opt (list "html" "pdf" "zip")) "\\'")
   "Regular expression to match files for `ol-library-web-store-link'"
   :group 'ol-library-web
-  :type 'regexp)
+  :type 'regexp
+  :safe t)
 
 (defcustom ol-library-web-to-path-function-list '(ol-library-plain-folder-format
                                                    ol-library-year-folder-format)
@@ -18,7 +20,8 @@ The first function in this list defines the preferred function
 which will be used when creating new attachment folders. All
 functions of this list will be tried when looking for webs."
   :group 'ol-library-web
-  :type '(repeat (function :tag "Function with webname as input")))
+  :type '(repeat (function :tag "Function with webname as input"))
+  :safe t)
 
 (defun ol-library-web--collect ()
     "Create collection of webs."

@@ -1,0 +1,11 @@
+#+TITLE: Custom org link types for local libraries
+
+Collection of org link libraries that provide type links for various
+types of documents.
+
+I call each library =ol-library-[type]=. Libraries are filesystem
+collections of files that one can cross-ref by use of links.
+
+The benefit of this library is that one can ocnfigure emacs so that it
+knows of the location of these libraries throughout and, thus, won't
+have to dabble with attachments to org mode documents.

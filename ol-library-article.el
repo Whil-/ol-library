@@ -4,21 +4,24 @@
 (defcustom ol-library-article-dir "~/articles"
   "The path to be used for article-links."
   :group 'ol-library
-  :type 'directory)
+  :type 'directory
+  :safe t)
 
 (defcustom ol-library-article-regexp (concat "\\`[^.].*\\." (regexp-opt (list "pdf" "epub" "doc" "docx")) "\\'")
   "Regular expression to match files for `ol-library-article-store-link'"
   :group 'ol-library
-  :type 'regexp)
+  :type 'regexp
+  :safe t)
 
 (defcustom ol-library-article-to-path-function-list '(ol-library-plain-folder-format
-                                                   ol-library-year-folder-format)
+                                                      ol-library-year-folder-format)
   "List of functions parsing a article string into a folder-path.
 The first function in this list defines the preferred function
 which will be used when creating new attachment folders. All
 functions of this list will be tried when looking for articles."
   :group 'ol-library
-  :type '(repeat (function :tag "Function with articlename as input")))
+  :type '(repeat (function :tag "Function with articlename as input"))
+  :safe t)
 
 (defun ol-library-article--collect ()
     "Create collection of articles."

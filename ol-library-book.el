@@ -4,12 +4,16 @@
 (defcustom ol-library-book-dir "~/books"
   "The path to be used for book-links."
   :group 'ol-library
-  :type 'directory)
-(defcustom test (concat  "sdf" "lkj") "sdf" :type 'regexp)
-(defcustom ol-library-book-regexp (concat "\\`[^.].*\\." (regexp-opt (list "pdf" "epub")) "\\'")
+  :type 'directory
+  :safe t)
+
+(defcustom ol-library-book-regexp (concat "\\`[^.].*\\."
+                                          (regexp-opt (list "pdf" "epub"))
+                                          "\\'")
   "Regular expression to match files for `ol-library-book-store-link'"
   :group 'ol-library
-  :type 'regexp)
+  :type 'regexp
+  :safe t)
 
 (defcustom ol-library-book-to-path-function-list '(ol-library-plain-folder-format
                                                    ol-library-year-folder-format)
@@ -18,7 +22,8 @@ The first function in this list defines the preferred function
 which will be used when creating new attachment folders. All
 functions of this list will be tried when looking for books."
   :group 'ol-library
-  :type '(repeat (function :tag "Function with bookname as input")))
+  :type '(repeat (function :tag "Function with bookname as input"))
+  :safe t)
 
 (defun ol-library-book--collect ()
     "Create collection of books."
