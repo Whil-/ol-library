@@ -28,20 +28,27 @@ functions of this list will be tried when looking for books."
 (defun ol-library-book--collect ()
     "Create collection of books."
     (ol-library-collect ol-library-book-dir
-                        ol-library-book-regexp))
+                        ol-library-book-regexp
+                        #'ol-library-cleanup-remove-tags-and-suffix))
 
 (defun ol-library-book--expand (book)
   "Expand an book into a path.
-Based on `ol-library-book-to-path-function-list' and
+Based on `ol-library-book-to-path-function-list' andn
 `ol-library-book-dir'."
   (ol-library-dir-from-library-object book
                                        ol-library-book-to-path-function-list
-                                       ol-library-book-dir))
+                                       ol-library-book-dir
+                                       #'ol-library-fixup-complete-filename-from-path))
 
 (defun ol-library-book-follow (book arg)
   "Open BOOK attachment.
 See `org-open-file' for details about ARG."
   (org-link-open-as-file (ol-library-book--expand book) arg))
+
+;;;###autoload
+(defun ol-library-book-open-in-dired ()
+  (interactive)
+  (dired ol-library-book-dir))
 
 (defun ol-library-book-complete-link ()
   "Advise the user with the available files in the attachment directory."
