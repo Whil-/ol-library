@@ -8,7 +8,7 @@
   :safe t)
 
 (defcustom ol-library-book-regexp (concat "\\`[^.].*\\."
-                                          (regexp-opt (list "pdf" "epub"))
+                                          (regexp-opt (list "pdf" "epub" "djvu" "djv"))
                                           "\\'")
   "Regular expression to match files for `ol-library-book-store-link'"
   :group 'ol-library
