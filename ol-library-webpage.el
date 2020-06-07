@@ -1,5 +1,5 @@
 ;;; ol-library-webpage-*
-(require 'ol-library)
+(require 'ol-library-core)
 
 (defcustom ol-library-webpage-dir "~/webpages"
   "The path to be used for webpage-links."

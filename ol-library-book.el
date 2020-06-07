@@ -1,5 +1,5 @@
 ;;; ol-library-book-*
-(require 'ol-library)
+(require 'ol-library-core)
 
 (defcustom ol-library-book-dir "~/books"
   "The path to be used for book-links."

@@ -1,5 +1,5 @@
 ;;; ol-library-video-*
-(require 'ol-library)
+(require 'ol-library-core)
 
 (defcustom ol-library-video-dir "~/videos"
   "The path to be used for video-links."

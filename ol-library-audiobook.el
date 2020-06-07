@@ -1,5 +1,5 @@
 ;;; ol-library-audiobook-*
-(require 'ol-library)
+(require 'ol-library-core)
 
 (defcustom ol-library-audiobook-dir "~/audiobooks"
   "The path to be used for audiobook-links."

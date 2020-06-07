@@ -1,5 +1,5 @@
 ;;; ol-library-article-*
-(require 'ol-library)
+(require 'ol-library-core)
 
 (defcustom ol-library-article-dir "~/articles"
   "The path to be used for article-links."
