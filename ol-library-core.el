@@ -105,4 +105,4 @@ providing a correct path to the LIBRARY-OBJECT."
       (error "Cannot find file at any locations: %s" (file-name-nondirectory path)))))
 
 
-(provide 'ol-library)
+(provide 'ol-library-core)
