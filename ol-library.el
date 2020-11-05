@@ -28,6 +28,7 @@
 (require 'ol-library-book)
 (require 'ol-library-video)
 (require 'ol-library-webpage)
+(require 'ol-library-document)
 
 (provide 'ol-library)
 ;;; ol-library.el ends here

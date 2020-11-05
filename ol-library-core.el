@@ -1,4 +1,4 @@
-;;; ol-library.el - Support for links to books in Org mode
+;;; ol-library.el - Support for links to custom file libraries in Org mode
 ;;
 ;; Gustav Wikström
 ;; Copyright (C) 2020
