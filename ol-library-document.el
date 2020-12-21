@@ -41,6 +41,11 @@ Based on `ol-library-document-to-path-function-list' and
 See `org-open-file' for details about ARG."
   (org-link-open-as-file (ol-library-document--expand document) arg))
 
+;;;###autoload
+(defun ol-library-document-open-in-dired ()
+  (interactive)
+  (dired ol-library-document-dir))
+
 (defun ol-library-document-complete-link ()
   "Advise the user with the available files in the attachment directory."
   (if (file-exists-p ol-library-document-dir)
