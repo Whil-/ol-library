@@ -24,7 +24,7 @@
 ;;; Code:
 
 (require 'ol-library-article)
-(require 'ol-library-audiobook)
+(require 'ol-library-audio)
 (require 'ol-library-book)
 (require 'ol-library-video)
 (require 'ol-library-webpage)
